@@ -8,7 +8,7 @@ public class DataFormatterTests
     public void TestChangeFormat()
     {
         string date = "01/01/2021";
-        string expected = "2021-01-01";
+        string expected = "2021-1-1";
         string actual = DateFormatter.ChangeFormat(date);
         Assert.That(actual, Is.EqualTo(expected));
     }

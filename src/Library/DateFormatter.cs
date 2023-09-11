@@ -15,6 +15,19 @@ public class DateFormatter
     /// <returns>La fecha convertida al formato "yyyy-mm-dd".</returns>
     public static string ChangeFormat(string date)
     {
-        return date.Substring(6) + "-" + date.Substring(3, 2) + "-" + date.Substring(0, 2);
+
+        var year = int.Parse(date.Substring(6));
+        var month = int.Parse(date.Substring(3, 2));
+        var day = int.Parse(date.Substring(0, 2));
+
+        if (DateVerify.IsValid(year, month, day))
+        {
+            return year + "-" + month + "-" + day;
+        }
+        else
+        {
+            throw new ArgumentException("La fecha no es válida");
+        }
+
     }
 }
