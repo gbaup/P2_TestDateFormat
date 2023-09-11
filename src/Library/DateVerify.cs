@@ -4,7 +4,6 @@ public class DateVerify
 {
   public static bool IsValid(int year, int month, int day)
   {
-
     try
     {
       DateTime date = new DateTime(year, month, day);
